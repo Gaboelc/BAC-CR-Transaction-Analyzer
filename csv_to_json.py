@@ -85,9 +85,3 @@ def main(file_path, output_file):
     transaction_data = clean_data(df)
     json_data = generate_flat_json(transaction_data, account, currency, opening_balance, year, month)
     save_json(json_data, output_file)
-
-
-if __name__ == "__main__":
-    file_path = './data/raw/Transacciones_Enero_2025.csv'
-    output_file = 'resultado.json'
-    main(file_path, output_file)
