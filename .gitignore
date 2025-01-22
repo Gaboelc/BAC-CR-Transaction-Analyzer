@@ -46,3 +46,4 @@ Lib/*.py
 /data/
 *.csv
 *.json
+*.pbix
