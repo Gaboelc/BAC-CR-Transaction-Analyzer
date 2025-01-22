@@ -18,7 +18,7 @@ def parse_dd_mm_yyyy(date_str):
         return None, None, None
 
 def procesar_csv_a_json(ruta_csv, ruta_salida_json):
-    with open(ruta_csv, mode='r', encoding='utf-8') as f:
+    with open(ruta_csv, mode='r', encoding='latin-1') as f:
         contenido = [line.strip() for line in f]
     if len(contenido) < 2:
         return
@@ -87,15 +87,6 @@ def procesar_csv_a_json(ruta_csv, ruta_salida_json):
             "Expense in Dolars": gasto_dolares
         }
         registros.append(registro)
-    with open(ruta_salida_json, 'w', encoding='utf-8') as f_out:
+    with open(ruta_salida_json, 'w', encoding='latin-1') as f_out:
         json.dump(registros, f_out, ensure_ascii=False, indent=4)
 
-
-if __name__ == "__main__":
-    carpeta_csv = "./data/raw/"
-    nombre_archivo_csv = "Transacciones_July_2024.csv"
-    ruta_completa_csv = os.path.join(carpeta_csv, nombre_archivo_csv)
-
-    ruta_salida = os.path.join(carpeta_csv, "resultado.json")
-
-    procesar_csv_a_json(ruta_completa_csv, ruta_salida)
