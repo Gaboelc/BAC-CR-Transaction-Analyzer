@@ -27,6 +27,6 @@ def process_all_csv(input_folder, output_folder):
                 print(f"Error procesando el archivo {file_name}: {e}")
 
 if __name__ == "__main__":
-    input_folder = './data/raw/'
-    output_folder = './data/cleaned/'
+    input_folder = '../data/raw/'
+    output_folder = '../data/cleaned/'
     process_all_csv(input_folder, output_folder)

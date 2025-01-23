@@ -119,8 +119,8 @@ def load_json_to_sqlite(json_folder, db_path='TransaccionesBAC.db', table_name='
             print(f"Error moviendo el archivo {file_name}: {e}")
 
 if __name__ == "__main__":
-    json_folder = './data/cleaned/DataCredit/0243'
-    db_path = './data/dbs/TransaccionesBAC.db'
+    json_folder = '../data/cleaned/DataCredit/0243'
+    db_path = '../data/dbs/TransaccionesBAC.db'
     table_name = 'Transacciones_Tarjeta_Credito_0243'
-    final_destination_folder = './data/cleaned/DataCredit/0243/OldData0243'
+    final_destination_folder = '../data/cleaned/DataCredit/0243/OldData0243'
     load_json_to_sqlite(json_folder, db_path, table_name, final_destination_folder)

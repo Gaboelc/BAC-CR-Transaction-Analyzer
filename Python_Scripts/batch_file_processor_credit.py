@@ -22,8 +22,8 @@ def procesar_todos_los_csv(carpeta_entrada, carpeta_salida, carpeta_old):
             shutil.move(ruta_csv, destino)
 
 if __name__ == "__main__":
-    carpeta_csv = "./data/raw"
-    carpeta_salida = "./data/cleaned/Credit"
-    carpeta_old = "./data/raw/OldDataCredit"
+    carpeta_csv = "../data/raw"
+    carpeta_salida = "../data/cleaned/Credit"
+    carpeta_old = "../data/raw/OldDataCredit"
     
     procesar_todos_los_csv(carpeta_csv, carpeta_salida, carpeta_old)

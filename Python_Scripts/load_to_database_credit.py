@@ -35,7 +35,7 @@ def load_json_to_mongodb(json_folder, db_name, collection_name, mongo_uri="mongo
     print("Proceso completado. Conexión a MongoDB cerrada.")
 
 if __name__ == "__main__":
-    json_folder = './data/cleaned/Credit/'
+    json_folder = '../data/cleaned/Credit/'
     db_name = 'TransaccionesBAC'
     collection_name = 'Transacciones_Tarjeta_Credito_0243'
     mongo_uri = "mongodb://localhost:27017/"
